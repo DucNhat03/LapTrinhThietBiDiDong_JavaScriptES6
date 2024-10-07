@@ -1,19 +1,19 @@
 const billss = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
-const calcTip = (bill) => {
+const calcTips = (bill) => {
     return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 };
 
-const tips = [];
-const totals = [];
+const tipss = [];
+const totalss = [];
 
 const billsLen = billss.length;
-for (let index = 0; index < billss; index++) {
+for (let index = 0; index < billsLen; index++) { // Sửa thành billsLen
     const element = billss[index];
-    tips.push(calcTip(element));
-    totals.push(element + tips[index]);
+    tipss.push(calcTips(element));
+    totalss.push(element + tipss[index]);
 }
 
-const calcAverage = (arr) => {
+const calcAveragee = (arr) => {
     var sum = 0;
     arr.forEach((element) => {
         sum += element;
@@ -22,4 +22,4 @@ const calcAverage = (arr) => {
 };
 console.log("--------------------------------Kết quả bài số 08 --------------------------------");
 
-console.log(calcAverage(totals));
+console.log(calcAveragee(totalss));
