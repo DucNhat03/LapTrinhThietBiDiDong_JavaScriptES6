@@ -1,4 +1,4 @@
-const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const billss = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
 const calcTip = (bill) => {
     return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 };
@@ -6,9 +6,9 @@ const calcTip = (bill) => {
 const tips = [];
 const totals = [];
 
-const billsLen = bills.length;
-for (let index = 0; index < billsLen; index++) {
-    const element = bills[index];
+const billsLen = billss.length;
+for (let index = 0; index < billss; index++) {
+    const element = billss[index];
     tips.push(calcTip(element));
     totals.push(element + tips[index]);
 }
